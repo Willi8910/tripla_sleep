@@ -1,0 +1,13 @@
+# .rubocop.yml
+
+
+AllCops:
+  TargetRubyVersion: 3.2.3
+  NewCops: enable
+
+  Exclude:
+  - 'bin/*'
+  - 'config/*'
+
+Style/Documentation:
+  Enabled: false
