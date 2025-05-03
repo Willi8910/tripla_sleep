@@ -53,6 +53,9 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
   gem 'rubocop', '~> 1.61', require: false
+  gem 'rubocop-performance', '~> 1.20', require: false
+  gem 'rubocop-rails', '~> 2.24', require: false
+  gem 'rubocop-rspec', '~> 2.27', require: false
 
   gem 'factory_bot_rails'
   gem 'faker'
