@@ -4,10 +4,19 @@
 AllCops:
   TargetRubyVersion: 3.2.3
   NewCops: enable
+  SuggestExtensions: false
 
   Exclude:
   - 'bin/*'
   - 'config/*'
+  - 'db/*'
+  - 'lib/tasks/auto_annotate_models.rake'
 
 Style/Documentation:
   Enabled: false
+
+Metrics/BlockLength:
+  Max: 150
+
+Metrics/MethodLength:
+  Max: 150

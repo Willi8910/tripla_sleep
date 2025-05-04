@@ -16,6 +16,7 @@ gem 'pg'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
 
+gem 'active_model_serializers'
 gem 'annotate', '~> 3.2' # Annotates Rails/ActiveRecord Models, etc based on the database schema
 gem 'dotenv-rails', '~> 3.1'
 
