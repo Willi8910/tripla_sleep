@@ -8,7 +8,17 @@ module SleepRecordCommands
     end
 
     def perform
-      Sorts::SleepRecordSort.new(@user.sleep_records, @params).execute
+      sleep_records = Filters::SleepRecordFilter.new(sleep_record_params).execute
+      Sorts::SleepRecordSort.new(sleep_records, @params).execute
+    end
+
+    private
+
+    def sleep_record_params
+      @params.slice(
+        :user_ids,
+        :clock_in_gt
+      )
     end
   end
 end

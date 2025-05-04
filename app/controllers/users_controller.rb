@@ -24,4 +24,18 @@ class UsersController < ApplicationController
       render_success(result[:success])
     end
   end
+
+  def following_user_sleep_records
+    following_sleep_record_params = {
+      user_ids: current_user.following_users.pluck(:following_user_id),
+      clock_in_gt: 1.week.ago,
+      sort_by: :interval_duration,
+      sort_order: :desc
+    }
+    sleep_records = SleepRecordCommands::QuerySleepRecords.new(current_user, following_sleep_record_params)
+                                                          .perform
+    user_hash = User.where(id: current_user.following_users.pluck(:following_user_id)).index_by(&:id)
+    render json: sleep_records, each_serializer: FollowedUserSleepRecordSerializer,
+           user_hash: user_hash, status: :ok
+  end
 end

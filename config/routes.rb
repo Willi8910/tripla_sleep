@@ -10,5 +10,8 @@ Rails.application.routes.draw do
       post 'follow'
       delete 'unfollow'
     end
+    collection do
+      get 'following_user_sleep_records'
+    end
   end
 end

@@ -16,6 +16,7 @@
 # Indexes
 #
 #  index_sleep_records_on_clock_in           (clock_in)
+#  index_sleep_records_on_created_at         (created_at)
 #  index_sleep_records_on_interval_duration  (interval_duration)
 #  index_sleep_records_on_time_duration      (time_duration) USING gist
 #

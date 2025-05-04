@@ -52,7 +52,7 @@ module Sorts
       default_sorting = 'asc'
       return default_sorting if params[:sort_order].nil?
 
-      order = params[:sort_order].downcase
+      order = params[:sort_order].to_s.downcase
       %w[asc desc].include?(order) ? order : default_sorting
     end
   end

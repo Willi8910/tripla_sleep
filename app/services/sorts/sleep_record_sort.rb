@@ -16,9 +16,9 @@ module Sorts
       )
     end
 
-    def by_duration
+    def by_interval_duration
       reflect(
-        query.order("duration #{sort_order}")
+        query.order("interval_duration #{sort_order}")
       )
     end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_05_03_061251) do
+ActiveRecord::Schema[7.1].define(version: 2025_05_04_032728) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "btree_gist"
   enable_extension "pg_partman"
@@ -107,6 +107,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_03_061251) do
     t.timestamptz "created_at", null: false
     t.timestamptz "updated_at", null: false
     t.index ["clock_in"], name: "index_sleep_records_on_clock_in"
+    t.index ["created_at"], name: "index_sleep_records_on_created_at"
     t.index ["interval_duration"], name: "index_sleep_records_on_interval_duration"
     t.index ["time_duration"], name: "index_sleep_records_on_time_duration", using: :gist
   end
