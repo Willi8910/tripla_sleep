@@ -15,6 +15,9 @@ AllCops:
 Style/Documentation:
   Enabled: false
 
+Naming/FileName:
+  Enabled: false
+
 Metrics/BlockLength:
   Max: 150
 

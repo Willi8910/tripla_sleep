@@ -1,0 +1,3 @@
+generate_partition:
+  cron: "every month"
+  class: "GenerateSleepRecordPartitionWorker"
