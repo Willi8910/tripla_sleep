@@ -7,7 +7,7 @@ module Sorts
     private
 
     def permissible_sort_keys
-      %w[created_at duration]
+      %w[created_at interval_duration]
     end
 
     def by_default

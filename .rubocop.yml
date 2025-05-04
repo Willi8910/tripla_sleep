@@ -23,3 +23,6 @@ Metrics/BlockLength:
 
 Metrics/MethodLength:
   Max: 150
+
+Style/OpenStructUse:
+  Enabled: false
