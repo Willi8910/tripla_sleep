@@ -19,6 +19,7 @@
 #  index_sleep_records_on_created_at         (created_at)
 #  index_sleep_records_on_interval_duration  (interval_duration)
 #  index_sleep_records_on_time_duration      (time_duration) USING gist
+#  index_sleep_records_on_user_id            (user_id)
 #
 # Foreign Keys
 #
