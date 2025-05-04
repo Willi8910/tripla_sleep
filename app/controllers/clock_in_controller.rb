@@ -15,7 +15,7 @@ class ClockInController < ApplicationController
       sleep_records = SleepRecordCommands::QuerySleepRecords.new(current_user, { created_at: :desc }).perform
       render json: sleep_records, status: :created
     else
-      render json: { error: 'Failed to clock in' }, status: :unprocessable_entity
+      render_failed('Failed to clock in')
     end
   end
 end

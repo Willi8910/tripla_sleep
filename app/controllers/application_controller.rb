@@ -10,4 +10,12 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     render json: { error: 'Unauthorized' }, status: :unauthorized unless current_user
   end
+
+  def render_success(message)
+    render json: { success: message }, status: :ok
+  end
+
+  def render_failed(error)
+    render json: { error: }, status: :unprocessable_entity
+  end
 end
